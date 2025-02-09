@@ -8,9 +8,7 @@ def server_program():
     server_socket.bind((host, port))
     server_socket.listen(1)
     num = 10
-    print("Server is listening...")
     conn, address = server_socket.accept()
-    print(f"Connection from {address}")
 
     while True:
         data = conn.recv(1024).decode()
